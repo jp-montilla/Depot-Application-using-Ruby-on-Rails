@@ -38,6 +38,9 @@ gem 'hirb', '~> 0.7.3'
 #For better display on errors
 gem 'better_errors', '~> 2.5', '>= 2.5.1'
 
+#For internalization
+gem 'i18n-js'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
