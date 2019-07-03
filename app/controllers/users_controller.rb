@@ -59,6 +59,8 @@ class UsersController < ApplicationController
       format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
+    rescue User::Error => e
+      redirect_to users_url, notice: e.message
   end
 
   private
