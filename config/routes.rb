@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  
   devise_for :users
   get 'admin' => 'admin#index'
   controller :sessions do
@@ -8,7 +9,6 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
-  resources :users
   resources :products do
     get :who_bought, on: :member
   end
