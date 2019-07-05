@@ -27,17 +27,10 @@
       <%= image_tag 'logo.svg', alt: 'The Pragmatic Bookshelf'%>
       <h1><%= @page_title%></h1>
 
-      <p class="navbar-text pull-right">
-      <% if user_signed_in? %>
-        Logged in as <strong><%= current_user.email %></strong>.
-        
-        <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
-      <% else %>
-        
+      
+      <% if !user_signed_in? %>
         <%= link_to "Login", new_user_session_path, :class => 'nav_link'  %>
       <% end %>
-      </p>
-
 
     </header>
     <section class="content">
@@ -47,6 +40,14 @@
             <%= render_if @cart && @cart.line_items.any?, @cart %> 
           </div>
         <% end %>
+
+        <% if user_signed_in? %>
+        <p class="logged_in_nav">
+                Logged in as <strong><%= current_user.email %></strong>.<br/><br/>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn logout_link'  %>
+        </p>
+        <% end %>
+
         <ul>
           <li><a href="/"><%= t('.home') %></a></li>
           <li><a href="/questions"><%= t('.questions') %></a></li>
@@ -61,6 +62,7 @@
               <li><%= link_to 'Users', users_path %></li>
               <!-- <li><a href="/">Users</a></li> -->
             </ul>
+            
           </nav>
         <% end %>
       </nav>
@@ -71,3 +73,8 @@
     
   </body>
 </html>
+
+
+
+
+

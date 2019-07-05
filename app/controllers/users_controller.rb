@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @users = User.order(:email)
+    @users = User.order(:email).page(params[:page])
     @current_user = current_user
   end
 

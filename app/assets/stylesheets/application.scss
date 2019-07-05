@@ -219,6 +219,18 @@ nav.logged_in_nav{
 		color: white;
 	}
 }
+p.logged_in_nav{
+	padding: 1em;
+	background: white;
+	border-top: solid thin #bfb;
+	// padding: 0.354em 0;
+	margin-top: 1em;
+	.logout_link{
+		color: white;
+		background: black;
+	}
+
+}
 
 .locale {
   float: right;
