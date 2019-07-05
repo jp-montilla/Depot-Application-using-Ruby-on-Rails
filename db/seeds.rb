@@ -6,6 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.create!(
+  email: 'admin@admin.com'
+  password: 'password'
+  password_confirmation: 'password'
+)
+
+
 Product.create!(
   title: 'Title of Product 1',
   description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
@@ -75,6 +82,8 @@ Product.create!(
   image_url: 'product10.jpg',
   price: 400.00
 )
+
+
 
 
 
