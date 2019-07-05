@@ -46,6 +46,8 @@ gem 'better_errors', '~> 2.5', '>= 2.5.1'
 gem 'i18n-js'
 # gem 'pry-rails'
 
+gem 'kaminari'
+
 
 
 # Use Capistrano for deployment

@@ -58,7 +58,7 @@ header.main {
     	-webkit-box-orient: horizontal;
 	}
 
-	nav {
+	nav.side_nav {
 		padding-bottom: 1em;
 		background: #141;
 		text-align: center;  /*mobile has centered nav*/ 
@@ -81,7 +81,7 @@ header.main {
 				text-transform: uppercase; 
 				letter-spacing: 0.354em; 
 				a{
-					color: #bfb;
+					color: white;
 					text-decoration: none;
 				}
 		        a:hover {

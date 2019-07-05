@@ -1,9 +1,11 @@
-<% if notice %>
+ <% if notice %>
 	<aside id="notice"><%= notice %></aside>
 <% end %>
 
 <h1><%= t('.title_html') %></h1>
 <h3><%= @time_now %></h3>
+
+<%=paginate @products%>
 
 <ul class="catalog">
 	<% cache @products do%>

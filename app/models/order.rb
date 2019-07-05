@@ -2,6 +2,8 @@ require 'pago'
 
 
 class Order < ApplicationRecord
+  # paginates_per 2
+
   has_many :line_items, dependent: :destroy
   
   enum paytype: {
