@@ -1,17 +1,26 @@
 Rails.application.routes.draw do
 
-  
   devise_for :users
   get 'admin' => 'admin#index'
-  controller :sessions do
-    get 'login' => :new
-    post 'login' => :create 
-    delete 'logout' => :destroy
-  end
+  # controller :sessions do
+  #   get 'login' => :new
+  #   post 'login' => :create 
+  #   delete 'logout' => :destroy
+  # end
 
   resources :products do
     get :who_bought, on: :member
   end
+
+  get 'users' => 'users#index'
+  get 'users/new' => 'users#new'
+  post 'users/create_user' => 'users#create'
+  delete 'users/delete/:id' => 'users#destroy', as: :user_delete
+
+
+
+
+
 
   scope '(:locale)' do
     resources :orders

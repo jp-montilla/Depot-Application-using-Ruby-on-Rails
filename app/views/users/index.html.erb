@@ -1,30 +1,30 @@
-<% if notice %>
-  <p id="notice"><%= notice %></p>
+<h1><%= @users.count %> users registered</h1>
+<%= link_to "Add User", users_new_path, :class => 'btn btn-primary'%><hr> 
+
+<% if flash[:errors] %>
+  <p class="display_error"> <%= flash[:errors] %></p>
 <% end %>
 
-
-<h1>Users</h1>
-
-<table>
+  
+<table class="table table-striped ">
   <thead>
     <tr>
-      <th>Name</th>
-      <th colspan="3"></th>
+      <th scope="col">Email</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
-
   <tbody>
-    <% @users.each do |user| %>
+    <% @users.each do |user|%>
       <tr>
-        <td><%= user.name %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% if @current_user.email == user.email%>
+          <td><%= user.email %> <strong> (Current User)</strong></td>
+        <% else %>
+          <td><%= user.email %></td>
+        <% end %>
+        <td>
+          <%= link_to "Delete User", user_delete_path(user.id), data:{ method: :delete, confirm: "Are you sure you want to delete #{user.email}'s profile?" } %>
+        </td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New User', new_user_path %>

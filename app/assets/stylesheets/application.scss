@@ -19,6 +19,11 @@ body {
 	margin: 0;
 	padding: 0;
 }
+.display_error{
+	background: red;
+	color: white;
+	padding: 10px;
+}
 header.main {
 	text-align: center; /* center on mobile*/ 
 	@media (min-width: 30em) {
@@ -28,6 +33,13 @@ header.main {
 	margin: 0;
 	h1 {
 		display: none;
+	}
+	.nav_link{
+		color: black;
+		font-size: 1.5em;
+	}
+	.nav_link:hover{
+		color: white
 	}
 }
 

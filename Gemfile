@@ -44,6 +44,7 @@ gem 'better_errors', '~> 2.5', '>= 2.5.1'
 
 #For internalization
 gem 'i18n-js'
+# gem 'pry-rails'
 
 
 
