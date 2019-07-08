@@ -4,9 +4,9 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.order(:title).page(params[:page])
-     respond_to do |format|
-      format.js {render 'index.js.coffee'}
+    @products = Product.order(created_at: :desc).page(params[:page]).per(3)
+    respond_to do |format|
+      format.js {render 'index.js.erb'}
       format.html
     end
   end
