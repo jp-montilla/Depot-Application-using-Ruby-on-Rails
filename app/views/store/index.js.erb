@@ -1,2 +1,2 @@
-$("#pages-products").html("<%= escape_javascript (render 'store/product') %>")
-$("#paginator").html("<%= escape_javascript(paginate(@products, remote: true)) %>")
+$("#pages-products").html("<%= j render 'store/product' %>")
+$("#paginator").html("<%= j paginate(@products, remote: true) %>")
