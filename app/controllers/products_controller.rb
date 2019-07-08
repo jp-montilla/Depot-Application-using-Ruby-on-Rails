@@ -5,6 +5,10 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     @products = Product.order(:title).page(params[:page])
+     respond_to do |format|
+      format.js {render 'index.js.coffee'}
+      format.html
+    end
   end
 
   # GET /products/1
