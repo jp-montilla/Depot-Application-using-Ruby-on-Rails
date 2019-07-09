@@ -21,7 +21,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 gem 'devise'
-# gem 'hirb', '~> 0.7.3'
+gem 'hirb', '~> 0.7.3'
 gem 'better_errors', '~> 2.5', '>= 2.5.1'
 gem 'i18n-js'
 gem 'kaminari'

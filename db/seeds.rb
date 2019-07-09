@@ -12,80 +12,30 @@ User.create!(
   password_confirmation: 'password'
 )
 
-
-Product.create!(
+Product.create({
   title: 'Title of Product 1',
-  description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image: 'product1.jpg',
-  price: 100.00
-)
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu egestas lorem. Praesent a pretium erat. Nulla facilisi. Aliquam dui augue, lacinia vitae facilisis at, sagittis non sem. Cras efficitur et quam non vehicula. Mauris suscipit eu turpis in placerat. Quisque elementum et risus id dictum. Duis malesuada ante sollicitudin porta sodales. Pellentesque sodales risus condimentum tincidunt laoreet. In laoreet congue tristique. Vestibulum libero sem, gravida sed massa a, congue vestibulum quam.',
+  image: File.new(Rails.root.join('path', 'to', 'product1.jpg')),
+  price: 100
+})
 
-Product.create!(
+Product.create({
   title: 'Title of Product 2',
-  description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image: 'product2.jpg',
-  price: 200.00
-)
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu egestas lorem. Praesent a pretium erat. Nulla facilisi. Aliquam dui augue, lacinia vitae facilisis at, sagittis non sem. Cras efficitur et quam non vehicula. Mauris suscipit eu turpis in placerat. Quisque elementum et risus id dictum. Duis malesuada ante sollicitudin porta sodales. Pellentesque sodales risus condimentum tincidunt laoreet. In laoreet congue tristique. Vestibulum libero sem, gravida sed massa a, congue vestibulum quam.',
+  image: File.new(Rails.root.join('path', 'to', 'product2.jpg')),
+  price: 101
+})
 
-Product.create!(
+Product.create({
   title: 'Title of Product 3',
-  description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image: 'product3.jpg',
-  price: 300.00
-)
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu egestas lorem. Praesent a pretium erat. Nulla facilisi. Aliquam dui augue, lacinia vitae facilisis at, sagittis non sem. Cras efficitur et quam non vehicula. Mauris suscipit eu turpis in placerat. Quisque elementum et risus id dictum. Duis malesuada ante sollicitudin porta sodales. Pellentesque sodales risus condimentum tincidunt laoreet. In laoreet congue tristique. Vestibulum libero sem, gravida sed massa a, congue vestibulum quam.',
+  image: File.new(Rails.root.join('path', 'to', 'product3.jpg')),
+  price: 102
+})
 
-Product.create!(  
+Product.create({
   title: 'Title of Product 4',
-  description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image: 'product4.jpg',
-  price: 400.00
-)
-
-Product.create!(
-  title: 'Title of Product 5',
-  description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image: 'product5.jpg',
-  price: 100.00
-)
-
-Product.create!(
-  title: 'Title of Product 6',
-  description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image: 'product6.jpg',
-  price: 200.00
-)
-
-Product.create!(
-  title: 'Title of Product 7',
-  description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image: 'product7.jpg',
-  price: 300.00
-)
-
-Product.create!(  
-  title: 'Title of Product 8',
-  description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image: 'product8.jpg',
-  price: 400.00
-)
-
-Product.create!(
-  title: 'Title of Product 9',
-  description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image: 'product9.jpg',
-  price: 300.00
-)
-
-Product.create!(  
-  title: 'Title of Product 10',
-  description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image: 'product10.jpg',
-  price: 400.00
-)
-
-
-
-
-
-
-
+  description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu egestas lorem. Praesent a pretium erat. Nulla facilisi. Aliquam dui augue, lacinia vitae facilisis at, sagittis non sem. Cras efficitur et quam non vehicula. Mauris suscipit eu turpis in placerat. Quisque elementum et risus id dictum. Duis malesuada ante sollicitudin porta sodales. Pellentesque sodales risus condimentum tincidunt laoreet. In laoreet congue tristique. Vestibulum libero sem, gravida sed massa a, congue vestibulum quam.',
+  image: File.new(Rails.root.join('path', 'to', 'product4.jpg')),
+  price: 103
+})
