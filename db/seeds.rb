@@ -16,70 +16,70 @@ User.create!(
 Product.create!(
   title: 'Title of Product 1',
   description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image_url: 'product1.jpg',
+  image: 'product1.jpg',
   price: 100.00
 )
 
 Product.create!(
   title: 'Title of Product 2',
   description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image_url: 'product2.jpg',
+  image: 'product2.jpg',
   price: 200.00
 )
 
 Product.create!(
   title: 'Title of Product 3',
   description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image_url: 'product3.jpg',
+  image: 'product3.jpg',
   price: 300.00
 )
 
 Product.create!(  
   title: 'Title of Product 4',
   description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image_url: 'product4.jpg',
+  image: 'product4.jpg',
   price: 400.00
 )
 
 Product.create!(
   title: 'Title of Product 5',
   description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image_url: 'product5.jpg',
+  image: 'product5.jpg',
   price: 100.00
 )
 
 Product.create!(
   title: 'Title of Product 6',
   description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image_url: 'product6.jpg',
+  image: 'product6.jpg',
   price: 200.00
 )
 
 Product.create!(
   title: 'Title of Product 7',
   description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image_url: 'product7.jpg',
+  image: 'product7.jpg',
   price: 300.00
 )
 
 Product.create!(  
   title: 'Title of Product 8',
   description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image_url: 'product8.jpg',
+  image: 'product8.jpg',
   price: 400.00
 )
 
 Product.create!(
   title: 'Title of Product 9',
   description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image_url: 'product9.jpg',
+  image: 'product9.jpg',
   price: 300.00
 )
 
 Product.create!(  
   title: 'Title of Product 10',
   description: %{<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sit amet congue nulla. Integer mollis feugiat dui quis tempus. Curabitur interdum lacinia semper. Suspendisse quis dolor non dolor ultrices sollicitudin. Donec neque nibh, euismod at placerat et, sagittis vel elit. Nullam fermentum vitae justo et congue. Pellentesque auctor faucibus nisi, ut mollis libero volutpat laoreet.</p>},
-  image_url: 'product10.jpg',
+  image: 'product10.jpg',
   price: 400.00
 )
 

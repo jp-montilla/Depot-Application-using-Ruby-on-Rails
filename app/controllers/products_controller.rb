@@ -4,7 +4,15 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @products = Product.order(created_at: :desc).page(params[:page]).per(3)
+    if params[:tag]
+      @products = Product.tagged_with(params[:tag])
+    else
+      @products = Product.all
+    end
+    @products = @products.order(created_at: :desc).page(params[:page]).per(3)
+
+
+    # @products = Product.order(created_at: :desc).page(params[:page]).per(3)
     respond_to do |format|
       format.js {render 'index.js.erb'}
       format.html
@@ -29,16 +37,12 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
-
-    respond_to do |format|
-      if @product.save
-        format.html { redirect_to @product, notice: 'Product was successfully created.' }
-        format.json { render :show, status: :created, location: @product }
-      else
-        puts @product.errors.full_messages
-        format.html { render :new }
-        format.json { render json: @product.errors, status: :unprocessable_entity }
-      end
+    if @product.save
+      flash[:success] = "Product create successfully"
+      redirect_to products_path
+    else
+      flash[:errors] = @product.errors.full_messages
+      render :new
     end
   end
 
@@ -88,7 +92,7 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:title, :description, :image_url, :price)
+      params.require(:product).permit(:title, :description, :image, :price)
     end
 
 
