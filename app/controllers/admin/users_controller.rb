@@ -1,5 +1,7 @@
 module Admin
   class UsersController < Admin::ApplicationController
+    before_action :authenticate_user!
+    
     # To customize the behavior of this controller,
     # you can overwrite any of the RESTful actions. For example:
     #
@@ -14,6 +16,15 @@ module Admin
     # def find_resource(param)
     #   User.find_by!(slug: param)
     # end
+    def valid_action?(name, resource = resource_class)
+      @user = User.all
+      if name.to_s == 'destroy' and @user.count == 1
+        return false
+      end
+      !!routes.detect do |controller, action|
+        controller == resource.to_s.underscore.pluralize && action == name.to_s
+      end
+    end
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
