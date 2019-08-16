@@ -1,5 +1,15 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :users
+    resources :carts
+    resources :line_items
+    resources :orders
+    resources :products
+
+    root to: "users#index"
+  end
+
   devise_for :users
   get 'admin' => 'admin#index'
 

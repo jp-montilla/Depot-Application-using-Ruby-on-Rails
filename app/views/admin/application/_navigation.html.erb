@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pragprog Books Online Store</title>
+    <%= csrf_meta_tags %>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+  </head>
+
+  <body>
+  
+    <section class="content">
+      <nav class="side_nav">
+        <% if @cart %>
+          <div id="cart" class="carts">
+            <%= render_if @cart && @cart.line_items.any?, @cart %> 
+          </div>
+        <% end %>
+
+        <% if user_signed_in? %>
+        <p class="logged_in_nav">
+                Logged in as <strong><%= current_user.email %></strong>.<br/><br/>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'btn logout_link'  %>
+        </p>
+        <% end %>
+
+        <ul>
+          <li><a href="/"><%= t('.home') %></a></li>
+          <li><a href="/questions"><%= t('.questions') %></a></li>
+          <li><a href="/news"><%= t('.news') %></a></li>
+          <li><a href="/contact"><%= t('.contact') %></a></li>
+        </ul>
+        <% if user_signed_in? %>
+          <nav class="logged_in_nav">
+            <ul>
+              <li><%= link_to 'Orders', admin_orders_path %></li>
+              <li><%= link_to 'Products', admin_products_path %></li>
+              <li><%= link_to 'Users', admin_users_path %></li>
+              <!-- <li><a href="/">Users</a></li> -->
+            </ul>
+            
+          </nav>
+        <% end %>
+      </nav>
+    
+    </section>
+    
+  </body>
+</html>
+
+
+
+
+

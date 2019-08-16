@@ -26,6 +26,7 @@ gem 'better_errors', '~> 2.5', '>= 2.5.1'
 gem 'i18n-js'
 gem 'kaminari'
 gem 'paperclip', '~> 6.1'
+gem 'administrate'
 
 
 
