@@ -17,10 +17,10 @@ class ProductDashboard < Administrate::BaseDashboard
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
     image: Field::Paperclip,
-    image_file_name: Field::String,
-    image_content_type: Field::String,
-    image_file_size: Field::Number,
-    image_updated_at: Field::DateTime,
+    # image_file_name: Field::String,
+    # image_content_type: Field::String,
+    # image_file_size: Field::Number,
+    # image_updated_at: Field::DateTime,
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -29,7 +29,7 @@ class ProductDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :id,
+    # :id,
     :title,
     :description,
     :price,
