@@ -16,6 +16,7 @@ class ProductDashboard < Administrate::BaseDashboard
     price: Field::String.with_options(searchable: false),
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    image: Field::Paperclip,
     image_file_name: Field::String,
     image_content_type: Field::String,
     image_file_size: Field::Number,
@@ -31,7 +32,8 @@ class ProductDashboard < Administrate::BaseDashboard
     :id,
     :title,
     :description,
-    :price
+    :price,
+    :image
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -41,27 +43,27 @@ class ProductDashboard < Administrate::BaseDashboard
     :title,
     :description,
     :price,
+    :image,
     :created_at,
     :updated_at,
-    :image_file_name,
-    :image_content_type,
-    :image_file_size,
-    :image_updated_at,
+    # :image_file_name,
+    # :image_content_type,
+    # :image_file_size,
+    # :image_updated_at,
   ].freeze
 
   # FORM_ATTRIBUTES
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    :line_items,
-    :orders,
     :title,
     :description,
     :price,
-    :image_file_name,
-    :image_content_type,
-    :image_file_size,
-    :image_updated_at,
+    :image
+    # :image_file_name,
+    # :image_content_type,
+    # :image_file_size,
+    # :image_updated_at,
   ].freeze
 
   # Overwrite this method to customize how products are displayed
