@@ -21,6 +21,7 @@ module Admin
       if name.to_s == 'destroy' and @user.count == 1
         return false
       end
+      # if name.to_s == 'edit' and current_user != 
       !!routes.detect do |controller, action|
         controller == resource.to_s.underscore.pluralize && action == name.to_s
       end
