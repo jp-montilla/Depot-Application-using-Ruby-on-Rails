@@ -24,4 +24,6 @@ end
 
 Rails.application.configure do
   config.middleware.use I18n::JS::Middleware
+  config.action_dispatch.rescue_responses["Pundit::NotAuthorizedError"] = :forbidden
 end
+

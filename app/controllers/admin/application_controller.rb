@@ -9,20 +9,21 @@ module Admin
     before_action :authenticate_admin
     before_action :authenticate_user!
     include Pundit
+    
 
 
     def authenticate_admin
       
     end
 
-    # rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+    rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
-    # private
+    private
 
-    #   def user_not_authorized
-    #     flash[:alert] = "You are not authorized to perform this action."
-    #     redirect_to(request.referrer || root_path)
-    #   end
+    def user_not_authorized
+      flash[:alert] = "You are not authorized to perform this action."
+      redirect_to(request.referrer || root_path)
+    end
 
     # Override this value to specify the number of elements to display at a time
     # on index pages. Defaults to 20.

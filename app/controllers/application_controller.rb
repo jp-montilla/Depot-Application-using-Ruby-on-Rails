@@ -4,6 +4,21 @@ class ApplicationController < ActionController::Base
   before_action :authenticate_user!
   include Pundit
 
+
+
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
+
+  private
+
+    def user_not_authorized
+      flash[:alert] = "You are not authorized to perform this action."
+      redirect_to(request.referrer || root_path)
+    end
+
+
+
+
+
   protected
     def set_i18n_locale_from_params
       if params[:locale]
@@ -21,13 +36,7 @@ class ApplicationController < ActionController::Base
       end
     end
 
-  # rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized
 
-  # private
+  
 
-  #   def user_not_authorized
-  #     flash[:alert] = "You are not authorized to perform this action."
-  #     redirect_to(request.referrer || root_path)
-  #   end
-    
 end
