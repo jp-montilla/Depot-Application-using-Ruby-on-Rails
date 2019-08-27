@@ -28,6 +28,7 @@ gem 'kaminari'
 gem 'administrate-field-paperclip', '~> 0.0.5'
 gem 'paperclip', '~> 6.1'
 gem 'administrate'
+gem 'pundit'
 
 
 

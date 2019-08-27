@@ -10,8 +10,12 @@ class UserDashboard < Administrate::BaseDashboard
   ATTRIBUTE_TYPES = {
     id: Field::Number,
     email: Field::String,
+    role: Field::Select.with_options(
+      :collection => ['admin','user']
+    ),
     password: Field::Password,
     password_confirmation: Field::Password,
+
     # encrypted_password: Field::String,
     # reset_password_token: Field::String,
     # reset_password_sent_at: Field::DateTime,
@@ -27,6 +31,7 @@ class UserDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :email,
+    :role,
     :created_at,
     :updated_at
     # :encrypted_password,
@@ -38,6 +43,7 @@ class UserDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :id,
     :email,
+    :role,
     # :encrypted_password,
     # :reset_password_token,
     # :reset_password_sent_at,
@@ -51,6 +57,7 @@ class UserDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :email,
+    :role,
     :password,
     :password_confirmation
     # :reset_password_token,

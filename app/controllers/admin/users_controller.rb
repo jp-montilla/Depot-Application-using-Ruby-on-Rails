@@ -1,6 +1,7 @@
 module Admin
   class UsersController < Admin::ApplicationController
     before_action :authenticate_user!
+    before_action :show
     
     # To customize the behavior of this controller,
     # you can overwrite any of the RESTful actions. For example:
@@ -26,6 +27,13 @@ module Admin
         controller == resource.to_s.underscore.pluralize && action == name.to_s
       end
     end
+
+    def show
+      @user = User.find(current_user.id)
+      authorize(@user, :admin?)
+    end
+
+
 
     # See https://administrate-prototype.herokuapp.com/customizing_controller_actions
     # for more information
