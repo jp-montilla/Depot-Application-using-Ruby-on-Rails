@@ -30,4 +30,6 @@ Rails.application.routes.draw do
     root 'store#index', as: 'store_index', via: :all
   end
 
+  root 'store#index'
+
 end
